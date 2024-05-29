@@ -1,4 +1,5 @@
 {
+  "extends": "fastify-tsconfig",
   "compilerOptions": {
     "sourceMap": true,
     "outDir": "./dist",

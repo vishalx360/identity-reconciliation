@@ -5,20 +5,31 @@
   "author": "Vishal Kumar 25267239+vishalx360@users.noreply.github.com",
   "main": "index.js",
   "scripts": {
-    "watch": "tsc --watch --preserveWatchOutput --pretty",
-    "dev": "cross-env NODE_ENV=development nodemon",
-    "format": "prettier --write \"src/**/*.ts\"",
-    "build": "rimraf dist && tsc",
-    "start": "node dist/index.js"
+    "dev": "nodemon",
+    "start": "ts-node src/index.ts",
+    "format": "prettier --write \"src/**/*.ts\""
   },
   "keywords": [],
   "license": "MIT",
+  "dependencies": {
+    "@fastify/autoload": "^5.8.0",
+    "@fastify/swagger": "^8.14.0",
+    "@fastify/swagger-ui": "^2.1.0",
+    "@t3-oss/env-core": "^0.7.3",
+    "dotenv": "^16.4.1",
+    "fastify": "^4.26.0",
+    "fastify-plugin": "^4.5.1",
+    "fastify-type-provider-zod": "^1.1.9",
+    "zod": "^3.22.4"
+  },
   "devDependencies": {
     "@types/node": "^20.11.16",
     "cross-env": "^7.0.3",
+    "fastify-tsconfig": "^2.0.0",
     "nodemon": "^3.0.3",
     "prettier": "^3.2.4",
     "rimraf": "^5.0.5",
+    "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.3.3"
   }

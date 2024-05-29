@@ -3,7 +3,7 @@ import { ZodTypeProvider } from "fastify-type-provider-zod";
 import z from "zod";
 
 const IDENTIFY_SCHEMA = z.object({
-  phoneNumber: z.string().max(32).describe("Phone Number of the user"),
+  phoneNumber: z.number().max(32).describe("Phone Number of the user"),
   email: z
     .string()
     .email()
@@ -11,11 +11,6 @@ const IDENTIFY_SCHEMA = z.object({
     .optional()
     .describe("Email of the user account"),
 });
-
-export type userType = {
-  id: string;
-  phone: string;
-};
 
 export default async function identifyController(fastify: FastifyInstance) {
   // POST /identify

@@ -21,8 +21,6 @@
     "@fastify/swagger-ui": "^2.1.0",
     "@joggr/fastify-prisma": "^1.2.3",
     "@prisma/client": "^5.14.0",
-    "@t3-oss/env-core": "^0.7.3",
-    "dotenv": "^16.4.5",
     "fastify": "^4.27.0",
     "fastify-plugin": "^4.5.1",
     "fastify-type-provider-zod": "^1.2.0",

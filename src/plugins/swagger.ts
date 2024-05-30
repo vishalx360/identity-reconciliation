@@ -13,11 +13,14 @@ const plugin = fp(
           description: `Solution to the Identity Reconciliation task for the Bitespeed Backend Developer role by Vishal Kumar`,
           version: "1.0.0",
         },
-        servers: [
-          {
-            url: "http://localhost:3000",
-            description: "Local Server",
-          },
+        servers: [{
+          url: "https://bitespeed-task.vishalx360.dev",
+          description: "Remote Server"
+        },
+        {
+          url: "http://localhost:3000",
+          description: "Local Server",
+        },
         ],
         tags: [{ name: "identify", description: "Identify end-points" }],
       },

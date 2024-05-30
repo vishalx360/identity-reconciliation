@@ -15,7 +15,25 @@ datasource db {
 }
 
 model Contact {
-  id    Int     @id @default(autoincrement())
-  email String?
-  phone Int?
+  id             Int            @id @default(autoincrement())
+  phoneNumber    String?
+  email          String?
+  linkedId       Int?
+  linkPrecedence LinkPrecedence @default(secondary)
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+  deletedAt      DateTime?
+
+  // Relations
+  linkedContact Contact?  @relation("ContactLink", fields: [linkedId], references: [id])
+  contacts      Contact[] @relation("ContactLink")
+
+  @@unique([phoneNumber, email])
+  @@index([phoneNumber])
+  @@index([email])
+}
+
+enum LinkPrecedence {
+  primary
+  secondary
 }

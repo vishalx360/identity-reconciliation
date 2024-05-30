@@ -7,5 +7,5 @@ fastify.listen({ host, port });
 
 console.log(`🚀  Fastify server running on port http://localhost:${port}`);
 console.log(`Route index: /`);
-console.log(`Route auth: /api/auth`);
-console.log(`Route task: /api/task`);
+console.log(`Route identify: /identify`);
+console.log(`Swagger UI: /documentation`);

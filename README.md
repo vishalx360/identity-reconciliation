@@ -6,6 +6,8 @@ Demo : [Identity Reconciliation](https://bitespeed-task.vishalx360.dev)
 
 Author : [Vishal Kumar](https://vishalx360.dev)
 
+![alt text](https://bitespeed-task.vishalx360.dev/thumbnail.jpg)
+
 This service handles the identification of users based on their email and/or phone number. The different cases and their outcomes are described below.
 
 ## API Endpoint
